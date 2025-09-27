@@ -53,7 +53,7 @@ nav {
 header img{
   max-width: 96px;
   height: auto;
-  cursor: pointer; /* Adicionado para indicar que é clicável */
+  cursor: pointer;
 }
 
 .logo {
@@ -151,7 +151,7 @@ section h2 {
 
 /* Seção Regras */
 .regras {
-    background-color: rgba(42, 64, 51, 0.05);
+    background-color: #2a40330d;
     padding: 30px 5%;
     max-width: 100%;
     margin: 0 0 40px 0;
@@ -169,7 +169,7 @@ section h2 {
     padding: 2rem;
     border-left: 5px solid var(--vermelho-cuca);
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px #0000001a;
 }
 
 /* Seção Galeria */
@@ -193,6 +193,30 @@ section h2 {
     filter: contrast(1.1);
 }
 
+/* Seção Contato */
+.contato {
+    background-color: var(--bege-fundo);
+    padding: 30px 5%;
+    max-width: 100%;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+.contato article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+.contato a {
+    color: var(--vermelho-cuca);
+    text-decoration: none;
+    font-weight: bold;
+}
+.contato img {
+    width: 40px;
+    height: auto;
+    margin: 10px 0 10px 0;
+}
 /* Estilo do Modal (escondido por padrão) */
 .modal {
     display: none; 
@@ -204,7 +228,7 @@ section h2 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.9);
+    background-color: #000000e6;
 }
 
 .modal-content {
@@ -263,13 +287,13 @@ section h2 {
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #000000cc;
 }
 
 
 /* Seção Liderança */
 #lideranca {
-    background-color: rgba(42, 64, 51, 0.03);
+    background-color: #2a403308;
     padding: 30px 5%;
     max-width: 100%;
     margin: 0 0 40px 0;
@@ -286,7 +310,7 @@ section h2 {
     background: var(--bege-fundo);
     border-left: 5px solid var(--verde-escuro);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px #00000014;
     padding: 1.5rem 1rem 1rem 1rem;
     text-align: center;
     width: 250px;
@@ -356,7 +380,7 @@ footer {
 .brilho-chuva {
     position: absolute;
     width: 8px;
-    height: 15px; /* Deixei mais "esticado" para parecer uma gota */
+    height: 15px;
     pointer-events: none;
     border-radius: 50%;
     background: radial-gradient(circle, #eabfff 50%, #c039ff 100%);
@@ -371,14 +395,14 @@ footer {
         opacity: 1;
     }
     to {
-        transform: translateY(180px) scale(0); /* Cai 180px e some */
+        transform: translateY(180px) scale(0);
         opacity: 0;
     }
 }
 /* === CÓDIGO DE RESPONSIVIDADE COMPLETO === */
 
 /* ---------------------------------------------------- */
-/* 1. Breakpoint para Desktops Pequenos e Tablets (até 1024px)
+/* 1. Breakpoint para Desktops Pequenos e Tablets (até 1024px)*/
 /* ---------------------------------------------------- */
 @media (max-width: 1024px) {
     .banner {
@@ -410,14 +434,14 @@ footer {
 }
 
 /* ---------------------------------------------------- */
-/* 2. Breakpoint para Celulares (até 768px)
+/* 2. Breakpoint para Celulares (até 768px)             */
 /* ---------------------------------------------------- */
 @media (max-width: 768px) {
     body {
         line-height: 1.6;
     }
 
-    /* Navegação Adaptativa (sem menu) */
+    /* Navegação Adaptativa */
     header {
         height: auto;
     }
