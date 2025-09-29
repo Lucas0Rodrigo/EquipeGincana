@@ -1,0 +1,514 @@
+/* Estilos gerais e paleta de cores */
+:root {
+    --verde-escuro: #2a4033;
+    --vermelho-cuca: #a33a3a;
+    --bege-fundo: #f5eeda;
+    --texto-cor: #333;
+    --fonte-titulo: 'Creepster', cursive; /* Fonte temática para títulos */
+    --fonte-corpo: 'Montserrat', sans-serif; /* Fonte limpa para textos */
+}
+
+/* Configurações básicas */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--bege-fundo);
+    color: var(--texto-cor);
+    margin: 0;
+    line-height: 1.7;
+}
+
+h1, h2 {
+    font-family: var(--fonte-titulo);
+    letter-spacing: 2px;
+    color: var(--verde-escuro);
+}
+
+/* Header e Navegação */
+header {
+    background-color: #d8c9a0cc;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 2px solid var(--verde-escuro);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+}
+
+header img{
+  max-width: 96px;
+  height: auto;
+  cursor: pointer;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--vermelho-cuca);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--verde-escuro);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--vermelho-cuca);
+}
+
+/* Estrutura das Seções */
+section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 15px 0 20px 0;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px !important; 
+    margin: 20px 10% 0 10% !important; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(42, 64, 51, 0.13);
+    background: linear-gradient(90deg, #2a4033 0%, #a33a3a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Seção Lenda */
+.lenda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.lenda-img {
+    flex: 1 1 400px;
+    margin: 0;
+}
+
+.lenda-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lenda-img img:hover {
+    transform: scale(1.03);}
+
+.lenda-texto {
+    flex: 1 1 300px;
+}
+
+.lenda-texto h1 {
+    font-size: 4rem;
+    margin-top: 0;
+}
+
+/* Seção Regras */
+.regras {
+    background-color: #2a40330d;
+    padding: 30px 5%;
+    max-width: 100%;
+    margin: 0 0 40px 0;
+
+}
+
+.regras-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.regra-item {
+    background: var(--bege-fundo);
+    padding: 2rem;
+    border-left: 5px solid var(--vermelho-cuca);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px #0000001a;
+}
+
+/* Seção Galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.grid-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, filter 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: contrast(1.1);
+}
+
+/* Seção Contato */
+.contato {
+    background-color: var(--bege-fundo);
+    padding: 30px 5%;
+    max-width: 100%;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+.ctt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contato article {
+    max-width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.contato a {
+    color: var(--vermelho-cuca);
+    text-decoration: none;
+    font-weight: bold;
+}
+.contato img {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0 10px 0;
+}
+.qrcode {
+    width: 140px !important;
+    height: 140px !important;
+    margin: 10px 0 10px 0;
+}
+/* Estilo do Modal (escondido por padrão) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000e6;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0.8)}
+    to {transform:scale(1)}
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: #000000cc;
+}
+
+
+/* Seção Liderança */
+#lideranca {
+    background-color: #2a403308;
+    padding: 30px 5%;
+    max-width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.lideres-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.lider-item {
+    background: var(--bege-fundo);
+    border-left: 5px solid var(--verde-escuro);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px #00000014;
+    padding: 1.5rem 1rem 1rem 1rem;
+    text-align: center;
+    width: 250px;
+}
+
+.lider-foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--vermelho-cuca);
+    background: #fff;
+}
+
+.lider-item figcaption {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    color: var(--verde-escuro);
+}
+
+.cargo {
+    display: block;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    color: var(--vermelho-cuca);
+    margin-top: 0.2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: var(--verde-escuro);
+    color: var(--bege-fundo);
+}
+
+/* Efeitos de Brilho */
+#brilhinhos-container {
+    position: fixed;
+    pointer-events: none;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 2000;
+}
+
+/* Brilhinho padrão para os botões */
+.brilhinho {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0.8;
+    background: radial-gradient(circle, #fffbe6 60%, #ffe066 100%);
+    animation: brilho-explode 0.8s forwards;
+}
+
+@keyframes brilho-explode {
+    to {
+        transform: translate(var(--x), var(--y)) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* NOVO efeito de chuva de brilho roxo para o emblema */
+.brilho-chuva {
+    position: absolute;
+    width: 8px;
+    height: 15px;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, #eabfff 50%, #c039ff 100%);
+    box-shadow: 0 0 5px #d354ff, 0 0 8px #fff;
+    /* A animação será controlada pelo JS agora */
+    animation: brilho-cai 2s forwards;
+}
+
+@keyframes brilho-cai {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(180px) scale(0);
+        opacity: 0;
+    }
+}
+/* === CÓDIGO DE RESPONSIVIDADE COMPLETO === */
+
+/* ---------------------------------------------------- */
+/* 1. Breakpoint para Desktops Pequenos e Tablets (até 1024px)*/
+/* ---------------------------------------------------- */
+@media (max-width: 1024px) {
+    .banner {
+        max-width: 90%;
+        align-items: center;
+    }
+
+    section {
+        padding: 40px 4%;
+    }
+
+    h1, .lenda-texto h1 {
+        font-size: 3.2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .lenda {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .regras-grid-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ctt {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ctt article {
+        flex-direction: column;
+    }
+
+    .ctt p {
+        margin: 0;
+        min-width: 360px;
+    }
+}
+
+/* ---------------------------------------------------- */
+/* 2. Breakpoint para Celulares (até 768px)             */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+    body {
+        line-height: 1.6;
+    }
+
+    /* Navegação Adaptativa */
+    header {
+        height: auto;
+    }
+
+    header img{
+      display: none;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    /* Tipografia e Espaçamento */
+    h1, .lenda-texto h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner {
+        display: none;
+    }
+    
+    .lider-item {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
